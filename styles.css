@@ -10,5 +10,12 @@ h1 {
     text-align: center;
 }
 
+#form {
+    text-align:center;
+}
+
+.footerText {
+    text-align:center;
+}
 /* font-face for Monteserrat is not working - make sure you sort this*/
 
