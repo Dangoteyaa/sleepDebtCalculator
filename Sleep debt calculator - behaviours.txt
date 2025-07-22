@@ -1,0 +1,19 @@
+Sleep debt calculator
+
+It calculates what your sleep debt on a daily.
+If your result is bad it will give you links to resources and also give you tips and tricks you can use to improve you sleep hygiene. 
+
+Daily:
+- user inputs how many hours they slept and the app tell them what their sleep debt is.
+- it could extrapolate this over the week and give tips see what their total at the end of the week could be. 
+
+If the sleep debt is bad provide links to:
+- reason why sleep is important => could link to an article and a video for different types of learners // could also link to a website that is a good resource for sleep related stuff// ?link to book about sleep
+
+ideal total for daily - 8 hrs
+
+give benefits of getting enough sleep.
+give drawbacks of not getting enough sleep.
+
+
+
