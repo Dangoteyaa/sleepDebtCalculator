@@ -8,6 +8,7 @@ h1 {
     color:rgb(34, 7, 192);
     font-size: 80px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #form {
@@ -15,8 +16,10 @@ h1 {
    
 }
 
-.footerText {
+footer {
     text-align:center;
+    font-style:italic;
+
 }
 
 /* note to self: font-face for Monteserrat is not working - make sure you sort this*/
@@ -31,4 +34,18 @@ body {
     font-family: 'Arial';
     font-size: 50px;
     color: white;
+}
+
+input {
+    width:250px;
+    height:30px;
+    margin-bottom:10px;
+}
+
+button {
+    height:50px;
+    width:130px;
+    font-size: 20px;
+    background-color: rgb(130, 130, 243);
+    border-color:rgb(130, 130, 243);
 }

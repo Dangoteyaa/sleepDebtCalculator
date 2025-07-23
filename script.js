@@ -1,7 +1,29 @@
 // get userInput
 //compare this against 8 hours of sleep which is the ideal number of hours of sleep one should have per night. 
-// the sleep debt is 8 hours - userInput
-//if the sleep debt is high link to resources and gives tips and tricks to help this improve
-// if sleep debt is low then congratulate them
+// return the amount of sleep debt
 
-let userInput = prompt ('Please enter how many hours you slept last night')
+const btn = document.querySelector("button");
+let userInputEl = document.querySelector("input");
+
+document.getElementById("button").addEventListener("click", calculateSleepDebt);
+
+function calculateSleepDebt () {
+    let idealHours = 8;
+    let userInput = userInputEl.value
+    let sleepDebt = idealHours - userInput;
+    if(userInput=""){
+        alert ('please enter the number of hours you slept last night');
+    }
+    if (sleepDebt <= 0) {
+        return document.getElementsByTagName("h1").textContent = "Congratulations you don't have any sleep debt!";
+     } else {
+        return document.getElementsByTagName("h1").textContent = `your sleep debt is ${sleepDebt} hours`;
+       
+    }
+
+
+}
+
+
+
+
