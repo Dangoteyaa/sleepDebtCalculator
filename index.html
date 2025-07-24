@@ -9,21 +9,23 @@
 <body>
 
     <!--Form Screen-->
-    
+    <div id="formScreen">
     <h1 id="heading">Sleep Debt Calculator </h1>
-            <form>
+            <form id="theForm">
                    <label for="sleepHours" class="questionText"><em>How many hours did you sleep last night?</em></label> 
                 <br>
             <input type = "text" id="formInput">
                 <br>
             <button id="button">Calculate</button>
             </form>
-        
-    <!--Result Screen-->
-    <h1>Your sleep debt is <span id="sleepDebtResult"></span></h1>
-    <button id="goBack">Go back</button>
+    </div>
 
-    
+    <!--Result Screen-->
+    <div id="resultScreen">
+        <h1>Your sleep debt is <span id="sleepDebtResult"></span></h1>
+        <button id="goBack">Go back</button>
+    </div>
+
    <script src="script.js"></script>     
 </body>
 <footer>
