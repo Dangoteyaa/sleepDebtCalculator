@@ -8,24 +8,27 @@
         <title>Sleep Debt Calculator</title>
 </head>
 <body>
-<!--Result Screen-->
-    <div id="resultScreen">
-        <h1>Your sleep debt is <span id="sleepDebtResult"></span></h1>
-        <button id="goBack">Go back</button>
-    </div>
-</body>
 
 <!--Form Screen-->
-    <div id="formScreen">
+    <div id="formScreen" class = "formScreen">
     <h1 id="heading">Sleep Debt Calculator </h1>
             <form id="theForm">
                    <label for="sleepHours" class="questionText"><em>How many hours did you sleep last night?</em></label> 
                 <br>
             <input type = "text" id="formInput">
                 <br>
-            <button id="button">Calculate</button>
+            <button id="calculateButton">Calculate</button>
             </form>
+    </div> 
+
+    <!--Result Screen-->
+    <div id="resultScreen" class = "resultScreen">
+        <h1>Your sleep debt is <span id="sleepDebtResult"></span></h1>
+        <button onclick="goBack()">Go back</button>
     </div>
+</body>
+
+
 
 
 <footer>

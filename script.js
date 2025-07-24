@@ -2,41 +2,44 @@
 //compare this against 8 hours of sleep which is the ideal number of hours of sleep one should have per night. 
 // return the amount of sleep debt
 
-const btn = document.getElementById("btn");
-let userInputEl = document.querySelector("input");
 
 const formScreen = document.getElementById("formScreen");
 const resultScreen = document.getElementById("resultScreen");
 const sleepDebtResult = document.getElementById("sleepDebtResult");
 const formInput = document.getElementById("formInput");
 const form = document.getElementById("theForm");
+const button = document.getElementById("calculateButton");
 
-document.getElementById("button").addEventListener("submit", calculateSleepDebt);
+button.addEventListener("click", calculateSleepDebt);
 
-function calculateSleepDebt () {
+function calculateSleepDebt(e) {
+    let message = ""
     e.preventDefault();
     const idealHours = 8;
-    let userInput = formInput.value;
+    let userInput = Number(formInput.value); 
     let sleepDebt = idealHours - userInput;
     if(!userInput){
-        alert ('please enter the number of hours you slept last night');
+        alert ('⛔ Please enter the number of hours you slept last night');
+    } else if (sleepDebt === 0) {
+        message = `😴 You overslept by ${sleepDebt} hour(s).`;
+        return;    
+    } else {
+        message = `⚠️ You're ${sleepDebt} hours short on sleep`;
+        return;        
     }
-    if (userInput){
-       if (sleepDebt === 0) {
-        sleepDebtResult.textContent = "Congratulations you don't have any sleep debt!";
+
+        sleepDebtResult = message;
+
         formScreen.classList.remove('active');
         resultScreen.classList.add('active');
-     } else {
-        sleepDebtResult.textContent = `your sleep debt is ${sleepDebt} hours`;
-        formScreen.classList.remove('active');
-        resultScreen.classList.add('active');
-    }
-   
 }
 
-}
 
-//?make another page and link
+
+
+
+
+
 
 
 
