@@ -5,7 +5,7 @@
 const btn = document.querySelector("button");
 let userInputEl = document.querySelector("input");
 
-document.getElementById("button").addEventListener("click", calculateSleepDebt);
+document.getElementById("button").addEventListener("submit", calculateSleepDebt);
 
 function calculateSleepDebt () {
     let idealHours = 8;
