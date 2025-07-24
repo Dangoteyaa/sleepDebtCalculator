@@ -11,16 +11,15 @@ function calculateSleepDebt () {
     let idealHours = 8;
     let userInput = userInputEl.value
     let sleepDebt = idealHours - userInput;
-    if(userInput=""){
+    if(!userInput){
         alert ('please enter the number of hours you slept last night');
     }
-    if (sleepDebt <= 0) {
-        return document.getElementsByTagName("h1").textContent = "Congratulations you don't have any sleep debt!";
+    if (sleepDebt === 0) {
+        return document.getElementsById("heading").textContent = "Congratulations you don't have any sleep debt!";
      } else {
-        return document.getElementsByTagName("h1").textContent = `your sleep debt is ${sleepDebt} hours`;
+        return document.getElementsById("heading").textContent = `your sleep debt is ${sleepDebt} hours`;
        
     }
-
 
 }
 
