@@ -2,7 +2,7 @@
 //compare this against 8 hours of sleep which is the ideal number of hours of sleep one should have per night. 
 // return the amount of sleep debt
 
-const btn = document.querySelector("button");
+const btn = document.getElementById("btn");
 let userInputEl = document.querySelector("input");
 
 const formScreen = document.getElementById("formScreen");
@@ -15,18 +15,24 @@ document.getElementById("button").addEventListener("submit", calculateSleepDebt)
 
 function calculateSleepDebt () {
     e.preventDefault();
-    let idealHours = 8;
-    let userInput = userInputEl.value
+    const idealHours = 8;
+    let userInput = formInput.value;
     let sleepDebt = idealHours - userInput;
     if(!userInput){
         alert ('please enter the number of hours you slept last night');
     }
-    if (sleepDebt === 0) {
-        return document.getElementsById("heading").textContent = "Congratulations you don't have any sleep debt!";
+    if (userInput){
+       if (sleepDebt === 0) {
+        sleepDebtResult.textContent = "Congratulations you don't have any sleep debt!";
+        formScreen.classList.remove('active');
+        resultScreen.classList.add('active');
      } else {
-        return document.getElementsById("heading").textContent = `your sleep debt is ${sleepDebt} hours`;
-       
+        sleepDebtResult.textContent = `your sleep debt is ${sleepDebt} hours`;
+        formScreen.classList.remove('active');
+        resultScreen.classList.add('active');
     }
+   
+}
 
 }
 
