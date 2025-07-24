@@ -5,9 +5,16 @@
 const btn = document.querySelector("button");
 let userInputEl = document.querySelector("input");
 
+const formScreen = document.getElementById("formScreen");
+const resultScreen = document.getElementById("resultScreen");
+const sleepDebtResult = document.getElementById("sleepDebtResult");
+const formInput = document.getElementById("formInput");
+const form = document.getElementById("theForm");
+
 document.getElementById("button").addEventListener("submit", calculateSleepDebt);
 
 function calculateSleepDebt () {
+    e.preventDefault();
     let idealHours = 8;
     let userInput = userInputEl.value
     let sleepDebt = idealHours - userInput;
